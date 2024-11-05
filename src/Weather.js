@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, } from 'react';
 import axios from 'axios';
-import css from './Weather.css'
+import './Weather.css';
+
 import ReactAnimatedWeather from "react-animated-weather/build/ReactAnimatedWeather";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -24,7 +25,7 @@ export default function Weather(props) {
     function changeCity(event) {
       setCity(event.target.value);
     }
-  
+
   
     function showWeather(response) {
       setMessage(true);

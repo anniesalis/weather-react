@@ -65,7 +65,7 @@ export default function App() {
           <div className="col-sm-2">2º 6º</div>
         </div>
         <br />
-        <p>This project is Open-Sourced on <a href="https://github.com/anniesalis" target="_blank">GitHub</a>
+        <p>This project is Open-Sourced on <a href="https://github.com/anniesalis" target="_annie salis github">GitHub</a>
         </p>
       </div>
 

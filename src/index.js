@@ -8,8 +8,14 @@ import Weather
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App city/>
-    <Weather city="porto"/>
+   <img
+className="log"
+src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/136/788/original/IMG_1506.jpg?1722561465"
+alt="Annie Salis"
+/>
+      <Weather />
+    <App />
+  
   </React.StrictMode>
 );
 

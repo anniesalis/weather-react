@@ -8,6 +8,7 @@ import ReactAnimatedWeather from "react-animated-weather/build/ReactAnimatedWeat
 
 export default function App() {
   return (
+
       <div className='container'>
         <div className="row forecast time">
           <div className="col-sm-2">18:00</div>

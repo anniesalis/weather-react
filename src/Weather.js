@@ -52,7 +52,7 @@ export default function Weather(props) {
       </form>
     );
   
-  
+    https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png
     if (message) {
       return (
         <div className='container'>

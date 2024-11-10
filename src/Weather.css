@@ -1,16 +1,40 @@
-.container {
-    border: 10px solid powderblue;
-    background-color: powderblue;
-    padding: 10px;
-    box-shadow: 50px;
-    max-width: 600px;
-    
+
+.weather {
+  color: rgb(135, 135, 135);
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  margin: 30px auto;
+  border-radius: 5px;
+  max-width: 600px ;
+  
+      
+}
+
+.weather h1 {
+
+display: block;
+font-size: 24px;
+font-weight: 100;
+height: auto;
+letter-spacing: normal;
+line-height: 28px;
+margin: 20px 0 0 0;
 
 
-        text-align: center;
-      }
-      li {
+}
+
+
+
+      .weather ul {
         list-style: none;
-        margin: 15px;
+        margin: 0;
+        padding: 0;
+        
+      }
+      .weather .temperature {
+        font-size: 50px;
+        position: relative;
+        top: 20px;
+        left: 10px;
       }
   

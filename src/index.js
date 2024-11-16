@@ -13,7 +13,7 @@ className="log"
 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/136/788/original/IMG_1506.jpg?1722561465"
 alt="Annie Salis"
 />
-      <Weather />
+      <Weather  defaultCity="Porto" />
     <App />
   
   </React.StrictMode>

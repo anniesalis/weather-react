@@ -1,6 +1,15 @@
 .App {
-  text-align: center;
-}
+
+    color: rgb(135, 135, 135);
+    font-family: Arial, sans-serif;
+    padding: 16px;
+    margin: 30px auto;
+    border-radius: 5px;
+    max-width: 600px ;
+    
+        
+  }
+  
 
 .App-logo {
   height: 40vmin;
@@ -27,22 +36,10 @@
 .App-link {
   color: #61dafb;
 }
-.log {
-  max-width: 100px;
-  display: block;
-  margin: 0 auto;
-}
+
 .col-sm-2 {
   margin: 5px;
   text-align: center;
 }
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

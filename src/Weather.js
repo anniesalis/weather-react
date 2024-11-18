@@ -2,6 +2,7 @@ import React, { useState,  } from 'react';
 import axios from 'axios';
 import './Weather.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import WeatherIcon from './WeatherIcon';
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -18,6 +19,9 @@ export default function Weather(props) {
       city: response.data.name,
       description: response.data.weather[0].description,
       date: new Date(), // Store the current date and time
+    iconCode: response.data.weather[0].icon,
+
+
     });
 
     setReady(true);
@@ -89,11 +93,9 @@ function search() {
 
         <div className='row'>
           <div className='col-6'>
-            <img
-              src='https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png'
-              alt='weather icon'
-            />{' '}
-            <span className='temperature'>{Math.round(weatherData.temperature)}</span>°C | ºF
+              
+              <WeatherIcon iconCode={weatherData.iconCode} />
+              <span className='temperature'>{Math.round(weatherData.temperature)}</span>°C | ºF
           </div>
           <div className='col-6'>
             <ul>

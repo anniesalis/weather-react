@@ -33,8 +33,6 @@ margin: 20px 0 0 0;
       }
       .weather .temperature {
         font-size: 50px;
-        position: relative;
-        top: 20px;
-        left: 10px;
+        
       }
   

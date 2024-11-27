@@ -1,8 +1,9 @@
-import React, { useState,  } from 'react';
+ import React, { useState,  } from 'react';
 import axios from 'axios';
 import './Weather.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WeatherIcon from './WeatherIcon';
+import WeatherForecast from './WeatherForecast';
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -13,15 +14,15 @@ export default function Weather(props) {
     console.log(response.data);
 
     setWeatherData({
-      temperature: response.data.main.temp,
+      temperature: response.data.temperature.current,
+      coordinates: response.data.coordinates,
       wind: response.data.wind.speed,
-      humidity: response.data.main.humidity,
-      city: response.data.name,
-      description: response.data.weather[0].description,
+      humidity: response.data.temperature.humidity,
+      city: response.data.city,
+       iconCode: response.data.condition.icon,
+      description: response.data.description,
       date: new Date(), // Store the current date and time
-    iconCode: response.data.weather[0].icon,
-
-
+    
     });
 
     setReady(true);
@@ -45,18 +46,19 @@ export default function Weather(props) {
   }
 
 function search() {
-  const apiKey = "4b3503b2f08a729413c4d33ef1186004";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const apiKey = "2ob113a879d9f74f53b31fb0t04ab5cb";
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
 
-    axios.get(apiUrl).then(showWeather).catch((error) => {
-      console.error("Error fetching data:", error); // Log the error for debugging
-    });
+    axios.get(apiUrl).then(showWeather)
+    .catch((error) => {
+      console.log(error.message); // A brief message describing the error
+      });
   
 }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
-  
   
   }
 
@@ -95,23 +97,24 @@ function search() {
           <div className='col-6'>
               
               <WeatherIcon iconCode={weatherData.iconCode} />
-              <span className='temperature'>{Math.round(weatherData.temperature)}</span>°C | ºF
+              <span className='temperature'>{Math.round(weatherData.temperature)}</span><span className='celsius'>°C</span> 
           </div>
           <div className='col-6'>
             <ul>
               <li className='text-danger'> Humidity: {weatherData.humidity}%</li>
               <li>Wind: {weatherData.wind} km/h</li>
             </ul>
+            
           </div>
         </div>
+        <WeatherForecast />
       </div>
     );
 
   } else {
-    
+
      search();
-  
-  
+
     return "Loading...";
   }
 }

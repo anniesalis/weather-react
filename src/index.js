@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
-import Weather
- from './Weather';
+import Weather from './Weather';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,8 +14,7 @@ src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/136/788/or
 alt="Annie Salis"
 />
       <Weather  defaultCity="Porto" />
-    <App />
-  
+      
   </React.StrictMode>
 );
 

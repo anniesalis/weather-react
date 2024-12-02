@@ -30,7 +30,7 @@ export default function WeatherForecast(props) {
   }, [props.city]);
 
   if (!loaded) {
-    return <div>Loading forecast...</div>;
+    return <div className="fst-italic">Forecast Coming Soon</div>;
   }
 
   if (forecast.length === 0) {

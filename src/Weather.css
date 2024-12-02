@@ -1,19 +1,21 @@
 
 .weather {
+  
   color: rgb(135, 135, 135);
   font-family: Arial, sans-serif;
-  padding: 16px;
+  padding: 15px;
   margin: 30px auto;
   border-radius: 5px;
   max-width: 600px ;
-  border: solid 1px rgb(146, 143, 143);
-      
+  border: solid 2px rgb(146, 143, 143);
+      background-color: rgb(223, 227, 240);
 }
 
 .weather h1 {
+
 display: block;
-font-size: 24px;
-font-weight: 100;
+font-size: 34px;
+font-weight: 700;
 height: auto;
 letter-spacing: normal;
 line-height: 28px;
@@ -27,11 +29,26 @@ margin: 22px 0 0 28px;
       }
       
       .weather .temperature {
-        font-size: 50px;
+        font-size: 70px;
+        position: relative;
+        bottom: 90px;
+        left: 36px;
+        font-weight: 700;
+        
       }
-
+.weather .icon {
+  position: relative;
+  left: 68px;
+  bottom: 70px;
+}
   .weather .celsius {
     
     position: relative;
-    top: -25px;
+    left: 36px;
+    top: -130px;
+    font-size: 30px;
+  }
+  .weather .portfolio {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
   }

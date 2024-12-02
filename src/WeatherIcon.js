@@ -29,7 +29,7 @@ export default function WeatherIcon({ iconCode }) {
     <ReactAnimatedWeather
       icon={iconMapping[iconCode]}
       color="gray"
-      size={40}
+      size={90}
       animate={true}
     />
   );

@@ -77,6 +77,7 @@ function search() {
                 onChange={handleCityChange}
               />
             </div>
+            
             <div className='col-3'>
               <input 
               type='submit' 
@@ -87,27 +88,36 @@ function search() {
           </div>
         </form>
 
-        <h1>{weatherData.city}</h1>
+        <h1 className='city'>{weatherData.city}</h1>
         <ul>
           <li>{formatDate(weatherData.date)}</li> {/* Display the current date and time */}
           <li className='text-primary text-capitalize'>{weatherData.description}</li>
         </ul>
 
-        <div className='row'>
-          <div className='col-6'>
-              
-              <WeatherIcon iconCode={weatherData.iconCode} />
-              <span className='temperature'>{Math.round(weatherData.temperature)}</span><span className='celsius'>°C</span> 
+          <div className='col-3'>
+
           </div>
-          <div className='col-6'>
-            <ul>
+          <div className='col-3'>
+
+</div>
+<div className='row'> 
+<div className='col-6'>
+<ul>
               <li className='text-danger'> Humidity: {weatherData.humidity}%</li>
               <li>Wind: {weatherData.wind} km/h</li>
-            </ul>
-            
-          </div>
-        </div>
-        <WeatherForecast />
+            </ul> 
+</div>
+
+<div className='col-6'>
+<span className='icon'><WeatherIcon iconCode={weatherData.iconCode} /> </span>
+              <span className='temperature'>{Math.round(weatherData.temperature)}</span><span className='celsius'>°C</span> 
+              
+</div>
+</div>
+               
+         <WeatherForecast />   
+        <hr />
+        <p className='text-center portfolio'>This Project was coded by <a href="https://www.shecodes.io/graduates/132246-annie-salis-akor/">Annie Salis</a> as part of my <a href="https://www.shecodes.io/">SheCodes</a> Project, it is Open-Sourced on <a href="https://github.com/anniesalis">GitHub</a></p>
       </div>
     );
 
@@ -117,4 +127,5 @@ function search() {
 
     return "Loading...";
   }
+ 
 }

@@ -87,7 +87,7 @@ function search() {
             </div>
           </div>
         </form>
-
+<br />
         <h1 className='city'>{weatherData.city}</h1>
         <ul>
           <li>{formatDate(weatherData.date)}</li> {/* Display the current date and time */}

@@ -35,6 +35,7 @@ margin: 22px 0 0 28px;
         left: 36px;
         font-weight: 700;
         
+        
       }
 .weather .icon {
   position: relative;
@@ -51,4 +52,15 @@ margin: 22px 0 0 28px;
   .weather .portfolio {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
+  }
+
+  @media (max-width:576px) {
+    .weather {
+  
+      
+      padding: 5px;
+      
+      max-width: 450px ;
+       }
+    
   }
